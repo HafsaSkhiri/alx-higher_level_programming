@@ -1,10 +1,16 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    """give the result of the addition of all arguments """
-    import sys
-    total = 0
-    cont = len(sys.argv) - 1
-    for index in range(cont):
-        num = int(sys.argv[index + 1])
-        total += num
-    print("{}".format(total))
+import sys
+
+if __name__ != "__main__":
+    exit()
+
+argc = len(sys.argv) - 1
+
+i = 0
+result = 0
+for arg in sys.argv:
+    if i != 0:
+        result += int(arg)
+    else:
+        i += 1
+print("{:d}".format(result))
