@@ -1,3 +1,3 @@
 #!/bin/bash
-# a script that takes in a URL and displays all HTTP methods the server will accept.
-curl -s "$1" | wc -c
+# sends a req to a URL and displays size of response propice
+curl -so /dev/null -w '%{size_download}\n' $1

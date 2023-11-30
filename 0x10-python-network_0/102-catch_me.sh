@@ -1,3 +1,3 @@
 #!/bin/bash
-# catch me if you can
-(curl -s -o /dev/null -w "You got me!" "http://0.0.0.0:5000/catch_me" && true) || false
+# causes server to respond with a certain msg propice
+curl -sL -X PUT -H "Origin:HolbertonSchool" -d "user_id=98" "0.0.0.0:5000/catch_me"
